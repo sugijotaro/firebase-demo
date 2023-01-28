@@ -12,25 +12,33 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="firebase_demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeView" id="BYZ-38-t0r" customClass="ViewController" customModule="firebase_demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qhj-ZJ-kIl">
-                                <rect key="frame" x="161.66666666666666" y="408.66666666666669" width="70" height="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ホーム画面" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XcL-h6-IQN">
+                                <rect key="frame" x="153" y="415.66666666666669" width="87" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hjV-yE-tIR">
+                                <rect key="frame" x="16.000000000000007" y="59" width="110.66666666666669" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Log in"/>
+                                <buttonConfiguration key="configuration" style="filled" title="ログアウト"/>
                                 <connections>
-                                    <action selector="LoginButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="i6y-t0-xyP"/>
+                                    <action selector="LogOutButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="wbX-yV-smp"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="qhj-ZJ-kIl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="TGh-6M-ivg"/>
-                            <constraint firstItem="qhj-ZJ-kIl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="muu-BR-70K"/>
+                            <constraint firstItem="hjV-yE-tIR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="3fX-Jt-qb0"/>
+                            <constraint firstItem="XcL-h6-IQN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="DCW-Ys-AMQ"/>
+                            <constraint firstItem="XcL-h6-IQN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XEY-gS-MAD"/>
+                            <constraint firstItem="hjV-yE-tIR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="juF-N5-rza"/>
                         </constraints>
                     </view>
                 </viewController>

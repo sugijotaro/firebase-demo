@@ -14,7 +14,10 @@
 		0A3299C1297C4EFD0020D0AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A3299C0297C4EFD0020D0AF /* Assets.xcassets */; };
 		0A3299C4297C4EFD0020D0AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A3299C2297C4EFD0020D0AF /* LaunchScreen.storyboard */; };
 		0AB75C6C29856A5D00FE5BB3 /* UserDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB75C6B29856A5D00FE5BB3 /* UserDataStore.swift */; };
+		0AB75C732985778D00FE5BB3 /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AB75C722985778D00FE5BB3 /* Tutorial.storyboard */; };
+		0AB75C752985779900FE5BB3 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB75C742985779900FE5BB3 /* TutorialViewController.swift */; };
 		0ABFB4CB297C4FB2000F7BCF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0ABFB4CA297C4FB2000F7BCF /* GoogleService-Info.plist */; };
+		0AFAC532298586F800ADAFF7 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFAC531298586F800ADAFF7 /* SignUpViewController.swift */; };
 		A09481445CB38B33B62E5F7C /* Pods_firebase_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FEB6B5A3FFBAF55E226CA33 /* Pods_firebase_demo.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,7 +32,10 @@
 		0A3299C5297C4EFD0020D0AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A3CBC3B297CF294003C529C /* firebase-demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "firebase-demo.entitlements"; sourceTree = "<group>"; };
 		0AB75C6B29856A5D00FE5BB3 /* UserDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataStore.swift; sourceTree = "<group>"; };
+		0AB75C722985778D00FE5BB3 /* Tutorial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
+		0AB75C742985779900FE5BB3 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		0ABFB4CA297C4FB2000F7BCF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0AFAC531298586F800ADAFF7 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		7FEB6B5A3FFBAF55E226CA33 /* Pods_firebase_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_firebase_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A8E324C89CD61F68D70E8C2 /* Pods-firebase-demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-firebase-demo.debug.xcconfig"; path = "Target Support Files/Pods-firebase-demo/Pods-firebase-demo.debug.xcconfig"; sourceTree = "<group>"; };
 		A81D450E7C2FC733803FCF05 /* Pods-firebase-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-firebase-demo.release.xcconfig"; path = "Target Support Files/Pods-firebase-demo/Pods-firebase-demo.release.xcconfig"; sourceTree = "<group>"; };
@@ -73,6 +79,7 @@
 				0A3299B9297C4EFC0020D0AF /* SceneDelegate.swift */,
 				0A3299BB297C4EFC0020D0AF /* ViewController.swift */,
 				0A3299BD297C4EFC0020D0AF /* Main.storyboard */,
+				0AB75C762985779F00FE5BB3 /* Tutorial */,
 				0AB75C6B29856A5D00FE5BB3 /* UserDataStore.swift */,
 				0A3299C0297C4EFD0020D0AF /* Assets.xcassets */,
 				0A3299C2297C4EFD0020D0AF /* LaunchScreen.storyboard */,
@@ -80,6 +87,16 @@
 				0ABFB4CA297C4FB2000F7BCF /* GoogleService-Info.plist */,
 			);
 			path = "firebase-demo";
+			sourceTree = "<group>";
+		};
+		0AB75C762985779F00FE5BB3 /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				0AB75C742985779900FE5BB3 /* TutorialViewController.swift */,
+				0AFAC531298586F800ADAFF7 /* SignUpViewController.swift */,
+				0AB75C722985778D00FE5BB3 /* Tutorial.storyboard */,
+			);
+			path = Tutorial;
 			sourceTree = "<group>";
 		};
 		ADA5146306EBD72C03672651 /* Frameworks */ = {
@@ -159,6 +176,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AB75C732985778D00FE5BB3 /* Tutorial.storyboard in Resources */,
 				0A3299C4297C4EFD0020D0AF /* LaunchScreen.storyboard in Resources */,
 				0ABFB4CB297C4FB2000F7BCF /* GoogleService-Info.plist in Resources */,
 				0A3299C1297C4EFD0020D0AF /* Assets.xcassets in Resources */,
@@ -215,8 +233,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AFAC532298586F800ADAFF7 /* SignUpViewController.swift in Sources */,
 				0AB75C6C29856A5D00FE5BB3 /* UserDataStore.swift in Sources */,
 				0A3299BC297C4EFC0020D0AF /* ViewController.swift in Sources */,
+				0AB75C752985779900FE5BB3 /* TutorialViewController.swift in Sources */,
 				0A3299B8297C4EFC0020D0AF /* AppDelegate.swift in Sources */,
 				0A3299BA297C4EFC0020D0AF /* SceneDelegate.swift in Sources */,
 			);
