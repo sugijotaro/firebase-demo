@@ -13,16 +13,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        // Firebase Authenticationのステートが変化した際に呼ばれるリスナーを追加
         Auth.auth().addStateDidChangeListener { (auth, user) in
+            // userがnil（ログアウト状態）の場合
             if user == nil {
+                // sceneがUIWindowSceneであることを確認
                 guard let scene = (scene as? UIWindowScene) else {
+                    // sceneがUIWindowSceneでない場合は何もしない
                     return
                 }
+                // UIWindowを作成し、windowプロパティに代入
                 let window = UIWindow(windowScene: scene)
                 self.window = window
+                // 作成したUIWindowを画面に表示
                 window.makeKeyAndVisible()
                 
+                //"Tutorial"という名前のStoryboardからTutorialViewControllerをインスタンス化
                 let vc = UIStoryboard(name: "Tutorial", bundle: nil).instantiateViewController(withIdentifier: "TutorialView") as! TutorialViewController
+                // インスタンス化したTutorialViewControllerをUIWindowのrootViewControllerに設定
                 window.rootViewController = vc
             }
         }
@@ -59,4 +67,3 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
 }
-
